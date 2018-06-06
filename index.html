@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Кулук Хомус</title>
+
+	<link rel="stylesheet" href="jquery.countdown.css">
+	<link rel="stylesheet" href="styles.css">
+
+	<script src="jquery-3.2.1.min.js" charset="utf-8"></script>
+	<script src="jquery.countdown.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="container">
+		<h1 id="timer"></h1>
+
+		<iframe id="homus" width="683" height="384" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+	<img id="logo" src="logo.png" alt="Кулук Хомус" draggable="false">
+
+	<script type="text/javascript">
+		$(function() {
+			var ts = new Date('June 14, 2018 21:50:48').getTime();
+			var newYear = true;
+
+			$('#timer').countdown({
+				timestamp: ts
+			});
+
+			var tutturu = setInterval(function() {
+				if (ts < new Date().getTime()) {
+					homus();
+					clearInterval(tutturu);
+				}
+			}, 1000);
+
+			function kuluk(s, k) {
+				var enc = '';
+				var str = '';
+				str = s.toString();
+				for (var i = 0; i < s.length; i++) {
+					var a = s.charCodeAt(i);
+					var b = a ^ k;
+					enc = enc + String.fromCharCode(b);
+				}
+				return enc;
+			}
+
+			function homus() {
+				$('#timer').hide();
+				$('#homus').attr('src', kuluk('ﾗﾋﾋﾏﾌￅ￐￐ﾈﾈﾈ￑ﾆﾐﾊﾋﾊﾝﾚ￑ﾜﾐﾒ￐ﾚﾒﾝﾚﾛ￐ﾵￎﾷﾺﾬﾧﾐﾹﾕﾆﾜ', -1));
+				$('#homus').show();
+			}
+		});
+	</script>
+</body>
+
+</html>

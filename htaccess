@@ -1,0 +1,24 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page2551581.html
+
+RewriteEngine On
+
+RewriteRule ^nwf1$ page2224424.html [NC]
+RewriteRule ^nwf1/$ page2224424.html [NC]
+
+RewriteRule ^tty$ page2828073.html [NC]
+RewriteRule ^tty/$ page2828073.html [NC]
+
+RewriteRule ^alanab$ page2883668.html [NC]
+RewriteRule ^alanab/$ page2883668.html [NC]
+
+RewriteRule ^egykt$ page2841167.html [NC]
+RewriteRule ^egykt/$ page2841167.html [NC]
+
+RewriteRule ^opros$ page4633725.html [NC]
+RewriteRule ^opros/$ page4633725.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/img/tildafavicon.ico [R=301,L]
+
